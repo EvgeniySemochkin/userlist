@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-    public static final int START_SEQ = 100000;
+    public static final int START_SEQ = 100001;
 
     @Id
     @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = START_SEQ)
@@ -27,6 +27,9 @@ public class User {
 
     @Column(name = "lastname")
     private String lastname;
+
+    public User() {
+    }
 
     public Integer getId() {
         return id;
